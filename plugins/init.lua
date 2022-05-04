@@ -1,22 +1,23 @@
 return {
-   { "stevearc/dressing.nvim" },
-   { "tpope/vim-surround" },
-   { "nvie/vim-togglemouse" },
-   {
-      "stephpy/vim-php-cs-fixer",
+   ["stevearc/dressing.nvim"] = {},
+   ["tpope/vim-surround"] = {},
+   ["nvie/vim-togglemouse"] = {},
+   ["hashivim/vim-terraform"] = {},
+   ["phpactor/phpactor"] = { ft = { "php" }, tag = "*", run = "composer install --no-dev -o" },
+   ["iamcco/markdown-preview.nvim"] = { run = "cd app && yarn install" },
+   ["goolord/alpha-nvim"] = {
+      disable = false,
+   },
+   ["stephpy/vim-php-cs-fixer"] = {
       config = function()
          vim.g.php_cs_fixer_rules = "@Symfony,@Symfony:risky' '--allow-risky=yes"
       end,
    },
-   { "hashivim/vim-terraform" },
-   { "phpactor/phpactor", ft = { "php" }, tag = "*", run = "composer install --no-dev -o" },
-   { "iamcco/markdown-preview.nvim", run = "cd app && yarn install" },
-   {
-      "nathom/filetype.nvim",
+   ["nathom/filetype.nvim"] = {
       config = function()
          vim.g.did_load_filetypes = 1
 
-         require("filetype").setup {
+         require("filetype").setup({
             overrides = {
                function_extensions = {
                   ["yaml"] = function()
@@ -24,7 +25,7 @@ return {
                      vim.bo.tabstop = 2
                      vim.bo.softtabstop = 2
                      vim.bo.shiftwidth = 2
-                     vim.cmd ":setlocal iskeyword+=-"
+                     vim.cmd(":setlocal iskeyword+=-")
                   end,
                   ["php"] = function()
                      vim.bo.filetype = "php"
@@ -41,11 +42,10 @@ return {
                   end,
                },
             },
-         }
+         })
       end,
    },
-   {
-      "karb94/neoscroll.nvim",
+   ["karb94/neoscroll.nvim"] = {
       opt = true,
       config = function()
          require("neoscroll").setup()
@@ -53,24 +53,21 @@ return {
 
       -- lazy loading
       setup = function()
-         require("core.utils").packer_lazy_load "neoscroll.nvim"
+         require("core.utils").packer_lazy_load("neoscroll.nvim")
       end,
    },
-   {
-      "jose-elias-alvarez/null-ls.nvim",
+   ["jose-elias-alvarez/null-ls.nvim"] = {
       after = "nvim-lspconfig",
       config = function()
          require("custom.plugin_confs.null-ls").setup()
       end,
    },
-   {
-      "folke/which-key.nvim",
+   ["folke/which-key.nvim"] = {
       config = function()
-         require("which-key").setup {}
+         require("which-key").setup({})
       end,
    },
-   {
-      "Pocco81/TrueZen.nvim",
+   ["Pocco81/TrueZen.nvim"] = {
       cmd = {
          "TZAtaraxis",
          "TZMinimalist",

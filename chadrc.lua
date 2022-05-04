@@ -2,20 +2,20 @@ local M = {}
 
 
 M.ui = {
-   theme = "everblush",
+   theme = "tokyodark",
 }
 
 local userPlugins = require "custom.plugins"
 
 M.plugins = {
-   install = userPlugins,
+   user = userPlugins,
    options = {
       lspconfig = {
          setup_lspconf = "custom.plugins.lspconfig",
       },
    },
-   default_plugin_config_replace = {
-      nvim_treesitter = {
+   override = {
+      ["nvim_treesitter"] = {
          highlight = {
             enable = true,
             additional_vim_regex_highlighting = true,
