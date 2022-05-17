@@ -5,13 +5,12 @@ M.ui = {
    theme = "tokyodark",
 }
 
-local userPlugins = require "custom.plugins"
 
 M.plugins = {
-   user = userPlugins,
+   user = require "custom.plugins",
    options = {
       lspconfig = {
-         setup_lspconf = "custom.plugins.lspconfig",
+         setup_lspconf = "custom.lspconfig",
       },
    },
    override = {
@@ -31,6 +30,8 @@ M.options = {
    user = function()
       vim.cmd ":set noswapfile"
       vim.cmd ":set iskeyword+=_"
+      --  nathom/filetype tell me to do this
+      vim.g.did_load_filetypes = 1
    end,
 
    shiftwidth = 4,
