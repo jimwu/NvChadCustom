@@ -28,11 +28,18 @@ M.plugins = {
 }
 
 M.options = {
+   user = function()
+      vim.cmd ":set noswapfile"
+      vim.cmd ":set iskeyword+=_"
+   end,
+
    shiftwidth = 4,
    tabstop = 4,
    softtabstop = 4,
    smartindent = true,
    autoindent = true,
 }
+
+M.mappings = require "custom.mappings"
 
 return M

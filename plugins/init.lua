@@ -62,11 +62,6 @@ return {
          require("custom.plugin_confs.null-ls").setup()
       end,
    },
-   ["folke/which-key.nvim"] = {
-      config = function()
-         require("which-key").setup({})
-      end,
-   },
    ["Pocco81/TrueZen.nvim"] = {
       cmd = {
          "TZAtaraxis",
