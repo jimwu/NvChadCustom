@@ -5,9 +5,6 @@ return {
    ["hashivim/vim-terraform"] = {},
    ["phpactor/phpactor"] = { ft = { "php" }, tag = "*", run = "composer install --no-dev -o" },
    ["iamcco/markdown-preview.nvim"] = { run = "cd app && yarn install" },
-   ["goolord/alpha-nvim"] = {
-      disable = false,
-   },
    ["stephpy/vim-php-cs-fixer"] = {
       config = function()
          vim.g.php_cs_fixer_rules = "@Symfony,@Symfony:risky' '--allow-risky=yes"
@@ -19,14 +16,13 @@ return {
       end,
    },
    ["karb94/neoscroll.nvim"] = {
-      opt = true,
       config = function()
          require("neoscroll").setup()
       end,
 
       -- lazy loading
       setup = function()
-         require("core.utils").packer_lazy_load("neoscroll.nvim")
+         nvchad.packer_lazy_load "neoscroll.nvim"
       end,
    },
    ["jose-elias-alvarez/null-ls.nvim"] = {

@@ -1,6 +1,8 @@
 local M = {}
 
 M.setup = function()
+   vim.g.did_load_filetypes = 1
+
    require("filetype").setup({
       overrides = {
          function_extensions = {
