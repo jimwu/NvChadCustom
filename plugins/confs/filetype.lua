@@ -20,6 +20,12 @@ M.setup = function()
                vim.bo.shiftwidth = 4
                vim.g.PHP_vintage_case_default_indent = 1
             end,
+            ["json"] = function()
+               vim.bo.filetype = "json"
+               vim.bo.tabstop = 4
+               vim.bo.softtabstop = 4
+               vim.bo.shiftwidth = 4
+            end,
             ["lua"] = function()
                vim.bo.filetype = "lua"
                vim.bo.tabstop = 3
