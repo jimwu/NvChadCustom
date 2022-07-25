@@ -8,11 +8,6 @@ M.ui = {
 
 M.plugins = {
    user = require "custom.plugins",
-   options = {
-      lspconfig = {
-         setup_lspconf = "custom.lspconfig",
-      },
-   },
    override = {
       ["nvim_treesitter"] = {
          highlight = {
