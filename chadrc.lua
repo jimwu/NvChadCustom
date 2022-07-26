@@ -1,10 +1,8 @@
 local M = {}
 
-
 M.ui = {
    theme = "tokyodark",
 }
-
 
 M.plugins = {
    user = require "custom.plugins",
@@ -19,14 +17,6 @@ M.plugins = {
          },
       },
    },
-}
-
-M.options = {
-   user = function()
-      vim.cmd ":set noswapfile"
-      vim.cmd ":set iskeyword+=_"
-      vim.opt.autoindent = true
-   end,
 }
 
 M.mappings = require "custom.mappings"
