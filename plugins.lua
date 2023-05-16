@@ -29,11 +29,9 @@ local plugins = {
    {
       "iamcco/markdown-preview.nvim",
       lazy = false,
-      run = "cd app && yarn install",
-      setup = function()
-         vim.g.mkdp_filetypes = { "markdown" }
+      config = function()
+         vim.fn["mkdp#util#install"]()
       end,
-      ft = { "markdown" },
    },
    {
       "stephpy/vim-php-cs-fixer",
@@ -44,6 +42,7 @@ local plugins = {
    },
    {
       "nathom/filetype.nvim",
+      lazy = false,
       config = function()
          require("custom.configs.filetype").setup()
       end,
