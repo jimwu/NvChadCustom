@@ -33,6 +33,9 @@ M.setup = function()
                vim.bo.shiftwidth = 3
             end,
          },
+         complex = {
+            ["Dockerfile.*"] = "dockerfile",
+         },
       },
    })
 end

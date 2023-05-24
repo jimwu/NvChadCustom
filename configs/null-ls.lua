@@ -11,7 +11,7 @@ local sources = {
    lint.shellcheck,
 
    -- yaml
-   diagnostics.yamllint,
+   -- diagnostics.yamllint,
 
    -- php
    diagnostics.php,

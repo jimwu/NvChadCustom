@@ -1,7 +1,10 @@
 local M = {}
 
 M.ui = {
-   theme = "tokyodark",
+   theme = "github_dark",
+   nvdash = {
+      load_on_startup = true,
+   }
 }
 
 M.plugins = "custom.plugins"

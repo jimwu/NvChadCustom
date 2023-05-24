@@ -28,7 +28,11 @@ local plugins = {
    },
    {
       "iamcco/markdown-preview.nvim",
-      lazy = false,
+      cmd = {
+         "MarkdownPreview",
+         "MarkdownPreviewStop",
+         "MarkdownPreviewToggle",
+      },
       config = function()
          vim.fn["mkdp#util#install"]()
       end,
@@ -96,6 +100,16 @@ local plugins = {
             "jq",
             "awk",
          },
+      },
+   },
+   {
+      "vim-test/vim-test",
+      cmd = {
+         "TestNearest",
+         "TestFile",
+         "TestSuite",
+         "TestLast",
+         "TestVisit",
       },
    },
 }
