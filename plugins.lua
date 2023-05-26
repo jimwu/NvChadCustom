@@ -21,27 +21,21 @@ local plugins = {
    },
    {
       "phpactor/phpactor",
-      lazy = false,
-      ft = { "php" },
-      tag = "*",
-      run = "composer update",
+      ft = "php",
+      build = "composer update --no-dev -o",
    },
    {
       "iamcco/markdown-preview.nvim",
-      cmd = {
-         "MarkdownPreview",
-         "MarkdownPreviewStop",
-         "MarkdownPreviewToggle",
-      },
+      ft = "markdown",
       config = function()
          vim.fn["mkdp#util#install"]()
       end,
    },
    {
       "stephpy/vim-php-cs-fixer",
-      lazy = false,
+      ft = "php",
       config = function()
-         vim.g.php_cs_fixer_rules = "@Symfony,@Symfony:risky' '--allow-risky=yes"
+         vim.g.php_cs_fixer_rules = "@Symfony,@Symfony:risky,-native_function_invocation,-native_constant_invocation,-concat_space,-yoda_style' '--allow-risky=yes"
       end,
    },
    {

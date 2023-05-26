@@ -1,7 +1,7 @@
 local M = {}
 
 M.ui = {
-   theme = "github_dark",
+   theme = "onedark",
    nvdash = {
       load_on_startup = true,
    }

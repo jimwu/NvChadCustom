@@ -32,6 +32,11 @@ M.setup = function()
                vim.bo.softtabstop = 3
                vim.bo.shiftwidth = 3
             end,
+            ["apib"] = function()
+               vim.bo.tabstop = 4
+               vim.bo.softtabstop = 4
+               vim.bo.shiftwidth = 4
+            end,
          },
          complex = {
             ["Dockerfile.*"] = "dockerfile",
