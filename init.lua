@@ -1,3 +1,3 @@
 vim.o.swapfile = false
-vim.opt.iskeyword = vim.o.iskeyword .. ',_'
-vim.opt.autoindent = true
+vim.o.autoindent = true
+vim.o.iskeyword = vim.o.iskeyword .. ',_'
