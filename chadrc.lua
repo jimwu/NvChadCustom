@@ -1,10 +1,11 @@
 local M = {}
 
 M.ui = {
-   theme = "onedark",
-   nvdash = {
-      load_on_startup = true,
-   }
+  theme = "tokyodark",
+  telescope = { style = "bordered" }, -- borderless / bordered
+  nvdash = {
+    load_on_startup = true,
+  }
 }
 
 M.plugins = "custom.plugins"

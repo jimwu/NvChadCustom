@@ -39,19 +39,6 @@ local plugins = {
       end,
    },
    {
-      "nathom/filetype.nvim",
-      lazy = false,
-      config = function()
-         require("custom.configs.filetype").setup()
-      end,
-   },
-   {
-      "karb94/neoscroll.nvim",
-      config = function()
-         require("neoscroll").setup()
-      end,
-   },
-   {
       "neovim/nvim-lspconfig",
       dependencies = {
          "jose-elias-alvarez/null-ls.nvim",
