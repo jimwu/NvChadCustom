@@ -1,10 +1,11 @@
 vim.o.swapfile = false
 vim.o.autoindent = true
-vim.o.iskeyword = vim.o.iskeyword .. ',_'
+vim.o.iskeyword = vim.o.iskeyword .. ',_,-'
 
 vim.filetype.add({
   extension = {
     apib = 'markdown',
+    yml = 'yaml',
     -- foo = 'fooscript',
     -- bar = function(path, bufnr)
     --   if some_condition() then
