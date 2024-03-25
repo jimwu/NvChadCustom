@@ -1,6 +1,14 @@
-vim.o.swapfile = false
-vim.o.autoindent = true
-vim.o.iskeyword = vim.o.iskeyword .. ',_,-'
+require "nvchad.options"
+
+-- add yours here!
+
+local o = vim.o
+o.cursorlineopt ='both' -- to enable cursorline!
+o.swapfile = false
+o.autoindent = true
+o.iskeyword = vim.o.iskeyword .. ',_,-'
+
+
 
 vim.filetype.add({
   extension = {

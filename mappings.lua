@@ -1,23 +1,12 @@
-local M = {}
+require "nvchad.mappings"
 
--- In order to disable a default keymap, use
-M.disabled = {
-}
+-- add yours here!
 
--- Your custom mappings
-M.abc = {
-}
+local map = vim.keymap.set
 
-M.copilot = {
-  i = {
-    ["<C-l>"] = {
-      function()
-        vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
-      end,
-      "Copilot Accept",
-      {replace_keycodes = true, nowait=true, silent=true, expr=true, noremap=true}
-    }
-  }
-}
-
-return M
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("i", "jk", "<ESC>")
+map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map("i", "<C-l>", function()
+    vim.fn.feedkeys(vim.fn['copilot#Accept'](), '')
+end, {desc = "Copilot Accept", replace_keycodes = true, nowait = true, silent = true, expr = true, noremap = true})

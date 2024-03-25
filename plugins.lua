@@ -1,4 +1,4 @@
-local plugins = {
+return {
   {
     "github/copilot.vim",
     lazy = false,
@@ -36,12 +36,12 @@ local plugins = {
     dependencies = {
       "jose-elias-alvarez/null-ls.nvim",
       config = function()
-        require "custom.configs.null-ls"
+        require "configs.null-ls"
       end,
     },
     config = function()
       require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require "configs.lspconfig"
     end,
   },
   {
@@ -101,6 +101,13 @@ local plugins = {
     end,
   },
   {
+    "stevearc/conform.nvim",
+    -- event = 'BufWritePre' -- uncomment for format on save
+    config = function()
+      require "configs.conform"
+    end,
+  },
+  {
     "stevearc/dressing.nvim",
     lazy = false,
   },
@@ -119,5 +126,3 @@ local plugins = {
     },
   },
 }
-
-return plugins
