@@ -40,7 +40,6 @@ return {
       end,
     },
     config = function()
-      require "plugins.configs.lspconfig"
       require "configs.lspconfig"
     end,
   },
