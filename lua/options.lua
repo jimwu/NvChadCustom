@@ -6,7 +6,7 @@ local o = vim.o
 o.cursorlineopt ='both' -- to enable cursorline!
 o.swapfile = false
 o.autoindent = true
-o.iskeyword = vim.o.iskeyword .. ',_,-'
+o.iskeyword = o.iskeyword .. ',_,-'
 
 
 
