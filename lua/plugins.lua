@@ -37,7 +37,7 @@ return {
 		main = "ibl",
 		opts = {},
 		config = function()
-			require("configs.ibl")
+			require("configs.ibl-background")
 		end,
 	},
 	{
